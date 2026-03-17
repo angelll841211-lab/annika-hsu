@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hsu, Ya-Chung (Annika) — CV</title>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:wght@300;400;600;700&family=Inria+Serif:ital,wght@1,700&family=Instrument+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #fff;
+    color: #222;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+
+  .page {
+    max-width: 820px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 210px 1fr;
+    min-height: 100vh;
+    background: #fff;
+    position: relative;
+  }
+
+  /* Single continuous amber divider — starts 10px from the top */
+  .page::before {
+    content: '';
+    position: absolute;
+    left: 210px;
+    top: 20px;
+    bottom: 0;
+    width: 1px;
+    background: #E8A020;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* LEFT SIDEBAR */
+  .sidebar {
+    padding: 36px 24px 36px 32px;
+  }
+
+  .logo { margin-bottom: 20px; }
+  .logo svg { width: 62px; height: 62px; }
+
+  .name {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.18;
+    color: #78A8EF;
+    margin-bottom: 28px;
+  }
+  .name-main {
+    font-family: 'Inria Serif', serif;
+    font-style: italic;
+    font-weight: 700;
+    display: block;
+  }
+  .name-nick {
+    font-family: 'Instrument Sans', sans-serif;
+    font-style: italic;
+    font-weight: 500;
+    display: block;
+  }
+
+  .sidebar-heading {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #E07030;
+    margin-bottom: 10px;
+    margin-top: 24px;
+  }
+
+  .contact-list { list-style: none; margin-bottom: 4px; }
+  .contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12.5px;
+    color: #444;
+    margin-bottom: 7px;
+  }
+  .contact-list li svg {
+    flex-shrink: 0;
+    width: 14px;
+    height: 14px;
+    color: #888;
+  }
+  .contact-list li a { color: #444; text-decoration: none; }
+  .contact-list li a:hover { color: #E07030; }
+
+  .portfolio-link {
+    font-size: 12.5px;
+    color: #444;
+    text-decoration: underline;
+    text-decoration-color: #ccc;
+    display: inline-block;
+    margin-bottom: 4px;
+  }
+  .portfolio-link:hover { color: #E07030; }
+
+  .skills-list { list-style: none; }
+  .skills-list li { font-size: 13px; color: #333; margin-bottom: 4px; }
+
+  /* RIGHT MAIN */
+  .main { padding: 36px 36px 36px 30px; }
+
+  .summary {
+    margin-bottom: 30px;
+    font-size: 13.5px;
+    color: #333;
+    line-height: 1.6;
+  }
+  .summary p + p { margin-top: 6px; }
+
+  .section-heading {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #E07030;
+    margin-bottom: 16px;
+    margin-top: 28px;
+  }
+  .section-heading:first-child { margin-top: 0; }
+
+  .exp-entry {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0 30px;
+    margin-bottom: 22px;
+  }
+
+  .exp-year { font-size: 12px; color: #888; padding-top: 1px; white-space: nowrap; }
+
+  .exp-company { font-size: 13.5px; font-weight: 600; color: #222; margin-bottom: 1px; }
+  .exp-company span { font-weight: 400; color: #666; }
+
+  .exp-role {
+    font-family: 'Lora', serif;
+    font-size: 14.5px;
+    font-weight: 400;
+    color: #78A8EF;
+    margin-bottom: 6px;
+  }
+
+  .exp-bullets { list-style: none; padding: 0; }
+  .exp-bullets li {
+    font-size: 13px;
+    color: #444;
+    padding-left: 14px;
+    position: relative;
+    margin-bottom: 3px;
+    line-height: 1.55;
+  }
+  .exp-bullets li::before { content: '•'; position: absolute; left: 2px; color: #aaa; }
+
+  .edu-entry {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 0 30px;
+    margin-bottom: 16px;
+  }
+  .edu-year { font-size: 12px; color: #888; padding-top: 1px; white-space: nowrap; }
+  .edu-school { font-size: 13.5px; font-weight: 700; color: #222; line-height: 1.4; }
+  .edu-degree { font-size: 13px; color: #555; margin-top: 1px; }
+
+  @media (max-width: 600px) {
+    .page { grid-template-columns: 1fr; }
+    .sidebar { border-right: none; border-bottom: 1px solid #e8e8e8; }
+    .exp-entry, .edu-entry { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    <div class="logo">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 50 50">
+        <defs>
+          <linearGradient id="logo-grad3" x1="46.3" y1="46.4" x2="27.3" y2="19.8" gradientTransform="translate(0 52) scale(1 -1)" gradientUnits="userSpaceOnUse">
+            <stop offset=".2" stop-color="#ec6830"/>
+            <stop offset=".3" stop-color="#ec6f39" stop-opacity="1"/>
+            <stop offset=".4" stop-color="#ef8253" stop-opacity=".8"/>
+            <stop offset=".6" stop-color="#f3a07e" stop-opacity=".7"/>
+            <stop offset=".8" stop-color="#f8cbb8" stop-opacity=".4"/>
+            <stop offset="1" stop-color="#fff" stop-opacity=".1"/>
+          </linearGradient>
+          <linearGradient id="logo-grad2" x1="12.5" y1="35.8" x2="23.4" y2="6.7" gradientTransform="translate(0 52) scale(1 -1)" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#f39700"/>
+            <stop offset="1" stop-color="#9d2e20"/>
+          </linearGradient>
+        </defs>
+        <path fill="url(#logo-grad3)" d="M39.6,9.3c-3.5,0-6.3,3.1-6.3,6.7v2.5c0,3.3-2.7,6-6,6h0c-1.8,0-3.5-.5-5-2.1-1.7-1.8-1.8-3.9-1.8-4.9h0c0-.6-.3-1-.8-1.1-.6,0-1.1.4-1.1.9v.2c0,1,0,3.1-1.8,4.9-1.5,1.6-3,2.1-4.9,2.1-.5,0-.9.3-1,.8,0,.6.4,1.1,1,1.1,1.8,0,3.4.5,4.9,2.1,1.7,1.8,1.8,3.9,1.8,4.9v6.3c0,.5.3.9.8,1,.6,0,1.1-.3,1.1-.9v-6.4c0-1,0-3.1,1.8-4.9,1.5-1.6,3.2-2.1,5-2.1h0c3.3,0,6,2.7,6,6v1.2c0,3.5,2.8,6.6,6.3,6.7,3.6,0,6.6-2.8,6.6-6.4V15.8c0-3.6-2.9-6.5-6.6-6.4h0Z"/>
+        <path fill="url(#logo-grad2)" d="M18.7,33.6v-.2c0-1,0-3.1-1.8-4.9-1.5-1.6-3.1-2.1-4.9-2.1s-1.1-.5-1-1.1c0-.5.5-.8,1-.8,1.9,0,3.4-.6,4.9-2.1,1.7-1.8,1.8-3.9,1.8-4.9v-.2c0-.6.5-1,1.1-.9.5,0,.8.5.8,1h0c0,1.2,0,3.2,1.8,5.1,1.5,1.6,3.2,2.1,5,2.1s2.5-.4,3.5-1.1l-4.8-10.1c-.1-.2-.2-.4-.3-.6h0c0-.1,0-.1,0-.1-1.2-1.9-3.4-3.2-5.9-3.2s-4.6,1.3-5.9,3.2h0c-.1.3-.2.5-.3.7l-8.1,14.8s-1.5,2.9-1.4,5.7c.1,3.8,3.6,6.4,7.4,6.4s6.1-1.8,7.1-4.3c.3-.7.4-1.5.4-2.3h0s0,0,0,0Z"/>
+        <path fill="#bf4d00" d="M27,26.3c-3.7,0-6.7,3-6.7,6.8s3,6.8,6.7,6.8,6.7-3,6.7-6.8-2.8-6.8-6.7-6.8Z"/>
+      </svg>
+    </div>
+
+    <div class="name">
+      <span class="name-main">Hsu,<br>Ya-Chung</span>
+      <span class="name-nick">(Annika)</span>
+    </div>
+
+    <div class="sidebar-heading">Contact</div>
+    <ul class="contact-list">
+      <li>
+        <!-- Filled location pin -->
+        <svg viewBox="0 0 24 24" fill="#999" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+        Taipei, Taiwan
+      </li>
+      <li>
+        <!-- Filled envelope -->
+        <svg viewBox="0 0 24 24" fill="#999" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        <a href="mailto:an.gelll841211@gmail.com">an.gelll841211@gmail.com</a>
+      </li>
+      <li>
+        <!-- LinkedIn rounded square badge -->
+        <svg viewBox="0 0 24 24" fill="#999" xmlns="http://www.w3.org/2000/svg">
+          <rect x="1" y="1" width="22" height="22" rx="4" fill="#999"/>
+          <path d="M7 9.5H5v8h2v-8zm-1-2.8a1.2 1.2 0 110-2.4 1.2 1.2 0 010 2.4zM19 17.5h-2v-3.8c0-1-.4-1.7-1.3-1.7-.7 0-1.1.5-1.3 1-.1.2-.1.5-.1.7v3.8h-2s0-6.2 0-8h2v1.1c.3-.4.7-1.1 1.8-1.1 1.3 0 2.9.9 2.9 3.4v4.6z" fill="white"/>
+        </svg>
+        <a href="https://www.linkedin.com/in/annikahsu0709/" target="_blank">annikahsu0709</a>
+      </li>
+    </ul>
+
+    <div class="sidebar-heading">Portfolio</div>
+    <a href="https://annikahsu.framer.website/" target="_blank" class="portfolio-link">annikahsu.framer.website/</a>
+
+    <div class="sidebar-heading">Skills</div>
+    <ul class="skills-list">
+      <li>Brand Identity</li>
+      <li>User Research</li>
+      <li>Adobe Suite</li>
+      <li>Rhinocreo</li>
+      <li>Blender</li>
+    </ul>
+  </aside>
+
+  <main class="main">
+    <div class="summary">
+      <p>Design &amp; User Research Specialist with 9+ years in industrial and visual design. Lead Designer skilled in steering startup strategies and synthesizing actionable product roadmaps.</p>
+      <p>I specialize in 3D-to-product commercialization for leading brands such as On Running. Leveraging digital models and user insights to elevate brand presence and global reach.</p>
+    </div>
+
+    <div class="section-heading">Professional Experience</div>
+
+    <div class="exp-entry">
+      <div class="exp-year">2024 – Pre</div>
+      <div class="exp-body">
+        <div class="exp-company">Freetrend Group / <span>Dong Thap, Vietnam</span></div>
+        <div class="exp-role">Footware Digitalization Senior Specialist</div>
+        <ul class="exp-bullets">
+          <li>Leading an 11-person team in digital footwear development</li>
+          <li>Executing 3D digital product development for a total of 21 shoe models across five seasons</li>
+          <li>Optimizing footwear modeling workflows to enhance accuracy and reduce physical sampling lead times</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-year">2023 – 2024</div>
+      <div class="exp-body">
+        <div class="exp-company">Beauty and Health Biomedical Co. / <span>Taipei, Taiwan</span></div>
+        <div class="exp-role">Product Designer</div>
+        <ul class="exp-bullets">
+          <li>Driven user-centric design iterations for service platforms</li>
+          <li>Translated data analytics into strategic design decisions</li>
+          <li>Spearheaded end-to-end product development from initial concept to production</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-year">2021 – 2023</div>
+      <div class="exp-body">
+        <div class="exp-company">Taipei Meeting Hall Foundation / <span>Taipei, Taiwan</span></div>
+        <div class="exp-role">Multimedia Designer</div>
+        <ul class="exp-bullets">
+          <li>Produced high-impact video content and motion graphics</li>
+          <li>Strategized and managed the YouTube channel</li>
+          <li>Collaborated on multimedia projects to elevate the foundation's visual identity across digital platforms</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="exp-entry">
+      <div class="exp-year">2019 – 2020</div>
+      <div class="exp-body">
+        <div class="exp-company">PackAge Plus / <span>Taipei, Taiwan</span></div>
+        <div class="exp-role">Brand Designer</div>
+        <ul class="exp-bullets">
+          <li>Pioneered sustainable packaging systems and process designs</li>
+          <li>Conducted UX testing and analysis for service workflows to improve the efficiency of recyclable packaging returns</li>
+          <li>Developed eco-friendly packaging products that balanced aesthetic appeal with practical, recyclable material properties</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-heading">Education</div>
+
+    <div class="edu-entry">
+      <div class="edu-year">2018 – 2021</div>
+      <div>
+        <div class="edu-school">National Taiwan University of Science and Technology</div>
+        <div class="edu-degree">Masters of Industrial Design</div>
+      </div>
+    </div>
+
+    <div
